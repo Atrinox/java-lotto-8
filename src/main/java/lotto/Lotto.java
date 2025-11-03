@@ -16,5 +16,15 @@ public class Lotto {
         }
     }
 
-    // TODO: 추가 기능 구현
+    public boolean contains(int n) {
+        return numbers.contains(n);
+    }
+
+    public int countMatchWith(List<Integer> reference) {
+        int cnt = 0;
+        for (int n : reference) {
+            if (numbers.contains(n)) cnt++;
+        }
+        return cnt;
+    }
 }
